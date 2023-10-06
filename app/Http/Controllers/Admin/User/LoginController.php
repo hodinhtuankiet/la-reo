@@ -13,4 +13,12 @@ class LoginController extends Controller
             'title' => 'Login',
         ]);
     }
+    public function store(Request $request)
+    {
+        // get all input fields
+        $this->validate($request, [
+            'email' => 'required|email:filter',
+            'password' => 'required',
+        ]);
+    }
 }
