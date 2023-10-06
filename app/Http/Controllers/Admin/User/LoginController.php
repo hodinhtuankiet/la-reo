@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth; // Import the Auth facade
 
 class LoginController extends Controller
 {
@@ -13,6 +14,7 @@ class LoginController extends Controller
             'title' => 'Login',
         ]);
     }
+
     public function store(Request $request)
     {
         // get all input fields
@@ -20,5 +22,15 @@ class LoginController extends Controller
             'email' => 'required|email:filter',
             'password' => 'required',
         ]);
+
+        // check nhập vào có khớp với data không
+        if (Auth::attempt([
+            'email' => $request->input('email'),
+            'password' => $request->input('password')
+        ])) {
+            // Authentication successful, you can add your logic here
+        } else {
+            // Authentication failed, handle it accordingly (e.g., redirect back with an error message)
+        }
     }
 }
