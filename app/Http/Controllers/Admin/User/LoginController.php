@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Admin\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth; // Import the Auth facade
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session; // Import the Session facade
+
 
 class LoginController extends Controller
 {
@@ -31,6 +33,7 @@ class LoginController extends Controller
             // Authentication successful, you can add your logic here
             return redirect()->route('admin');
         }
+        Session::flash('error', 'Tài khoản hoặc mật khẩu không đúng');
         return redirect()->back();
     }
 }
