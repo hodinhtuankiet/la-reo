@@ -27,10 +27,10 @@ class LoginController extends Controller
         if (Auth::attempt([
             'email' => $request->input('email'),
             'password' => $request->input('password')
-        ])) {
+        ], $request->input('remember'))) {
             // Authentication successful, you can add your logic here
-        } else {
-            // Authentication failed, handle it accordingly (e.g., redirect back with an error message)
+            return redirect()->route('admin');
         }
+        return redirect()->back();
     }
 }
