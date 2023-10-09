@@ -6,9 +6,10 @@
 </head>
 
 <body class="hold-transition login-page">
+    <!-- //// -->
     <div class="login-box">
         <div class="login-logo">
-            <a href="#"><b>Admin</b>DTK</a>
+            <a href="#"><b>Admin</a>
         </div>
         <!-- /.login-logo -->
         <div class="card">
@@ -50,7 +51,7 @@
                     @csrf
                 </form>
 
-                <!-- <div class="social-auth-links text-center mb-3">
+                <div class="social-auth-links text-center mb-3">
                     <p>- OR -</p>
                     <a href="#" class="btn btn-block btn-primary">
                         <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
@@ -59,7 +60,7 @@
                         <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
                     </a>
                 </div>
-                
+
 
                 <p class="mb-1">
                     <a href="forgot-password.html">I forgot my password</a>
@@ -67,12 +68,9 @@
                 <p class="mb-0">
                     <a href="register.html" class="text-center">Register a new membership</a>
                 </p>
-            </div> -->
-                <!-- /.login-card-body -->
             </div>
-        </div>
-        <!-- /.login-box -->
-        @include('admin.footer')
+
+            @include('admin.footer')
 </body>
 
 </html>
