@@ -11,5 +11,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/main', [MainController::class, 'index']);
 
     Route::get('/admin', [MainController::class, 'index'])
-        ->name(name: 'admin');
+        ->name('admin'); // Remove the extra "name()" method arguments
 });
