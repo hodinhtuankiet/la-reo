@@ -158,7 +158,7 @@
                                     <h3 class="card-title">{{$title}}</small></h3>
                                 </div>
                                 <!-- /.card-header -->
-
+                            @yield('content')
                             </div>
                             <!-- /.card -->
                         </div>
