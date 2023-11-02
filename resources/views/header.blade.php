@@ -1,8 +1,9 @@
+{{dd($menus1)}}
 <header>
     <!-- Header desktop -->
     <div class="container-menu-desktop">
         <!-- Topbar -->
-
+        <!-- {{dd(1)}} -->
         <div class="wrap-menu-desktop">
             <nav class="limiter-menu-desktop container">
 
@@ -14,7 +15,8 @@
                 <!-- Menu desktop -->
                 <div class="menu-desktop">
                     <ul class="main-menu">
-                        <li class="active-menu">
+                        <li class="active-menu"> <a href="/">Trang chủ</a></li>
+                        <li>
                             <a href="index.html">Home</a>
                             <ul class="sub-menu">
                                 <li><a href="index.html">Homepage 1</a></li>

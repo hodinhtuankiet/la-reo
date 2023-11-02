@@ -2,21 +2,20 @@
 
 namespace App\Providers;
 
-use App\View\Composers\MenuComposer;
-use Illuminate\Support\Facades;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\View\View;
+use App\Http\View\Composer\MenuComposer;
 
 class ViewServiceProvider extends ServiceProvider
 {
 
-    public function register(): void
+    public function register()
     {
+        // Register any bindings or services here if needed.
     }
-
 
     public function boot()
     {
-        View::composer('header', MenuComposer::class);
+        // Register your view composer
+        view()->composer('header', MenuComposer::class);
     }
 }

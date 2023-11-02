@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Composers;
+namespace App\Http\View\Composer;
 
 use App\Models\Menu;
 use App\Repositories\UserRepository;
@@ -17,7 +17,7 @@ class MenuComposer
 
     public function compose(View $view)
     {
-        $menu = Menu::select('id', 'name', 'parent_id')->where('active', 1)->orderByDesc('id')->get();
-        $view->with('menus', $menu);
+        $menus = Menu::select('id', 'name', 'parent_id')->where('active', 1)->orderByDesc('id')->get();
+        $view->with('menus1', $menus);
     }
 }
